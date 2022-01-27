@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Century Gothic;
+        }
+
+        header {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://storage.googleapis.com/kaggle-datasets-images/423609/807830/fc676eab839cc2a8134ac511f47e2c39/data-original.jpg?t=2019-11-22-17-04-44");
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+        }
+
+        ul {
+            float: right;
+            list-style-type: none;
+            margin-top: 25px;
+        }
+
+        ul li {
+            display: inline-block;
+            padding: 10px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 5px 20px;
+            border: 1px solid transparent;
+            transition: 0.6s ease;
+        }
+
+        ul li a:hover {
+            background-color: white;
+            color: #000;
+        }
+
+        .logo img {
+            float: left;
+            width: 160px;
+            height: auto;
+            padding: 25px
+        }
+
+        .main {
+            max-width: 1435px;
+            margin: auto;
+        }
+
+        ul li.active a {
+            background-color: white;
+            color: #000;
+        }
+
+        .title {
+            position: absolute;
+            top: 20%;
+            left: 5%;
+        }
+
+        .title h1 {
+            color: white;
+            font-size: 50px;
+            border: 5px solid white;
+            padding: 10px
+        }
+
+        .text {
+            position: absolute;
+            top: 35%;
+            left: 30%;
+        }
+
+        .text p {
+            color: white;
+            font-size: 20px;
+            border-left: 5px solid white;
+            padding: 10px
+        }
+
+        .dropdown{
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 5px solid white;
+            padding: 10px 30px;
+            color: white;
+            text-decoration: none;
+        }
+        input[type=button], input[type=submit]{
+            background-color: black ;
+            border: none solid transparent;
+            transition: 0.6s ease;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        input[type=button], input[type=submit]:hover{
+            background-color: white;
+            color: #000;
+        }
+        .btn:hover {
+            background-color: white;
+            color: #000;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonds Website</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="main">
+            <div class="logo">
+                <img
+                    src="https://innodatatics.ai/assets/innodatatics-white1.png">
+            </div>
+            <nav>
+                <ul class="nav justify-content-center">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="title">
+            <h1> Index Replication of Malaysian Stock Index <b>"FBM KLCI"</h1>
+        </div>
+        <div class="text">
+            <p> Click on submit button to get the replicated index of FBM KLCI.</p>
+        </div>
+        <div class="dropdown">
+            <form action="/input" method="post">
+                <label for="n_stocks"><h2>Select Number of Stocks To Replicate   :<select name="n_stocks" id="n_stocks">
+                  <option value="1">   1   </option>
+                  <option value="2">   2   </option>
+                  <option value="3">   3   </option>
+                  <option value="4">   4   </option>
+                  <option value="5">   5   </option>
+                  <option value="6">   6   </option>
+                  <option value="7">   7   </option>
+                  <option value="8">   8   </option>
+                  <option value="9">   9   </option>
+                  <option value="10">   10   </option>
+                </select></h2>
+                <br><br>
+                <input type="submit" value="Submit">
+              </form>
+          </div>
+    </header>
+
+</body>
+
+</html>

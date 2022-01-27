@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Century Gothic;
+        }
+
+        header {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.534), rgb(0, 0, 0)), url("https://wallpapercave.com/wp/wp3129753.jpg");
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .logo img {
+            float: left;
+            width: 160px;
+            height: auto;
+            padding: 25px
+        }
+
+        .main {
+            max-width: 1435px;
+            margin: auto;
+        }
+
+        ul {
+            float: right;
+            list-style-type: none;
+            margin-top: 25px;
+        }
+
+        ul li {
+            display: inline-block;
+            padding: 10px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 5px 20px;
+            border: 1px solid transparent;
+            transition: 0.6s ease;
+        }
+
+        ul li a:hover {
+            background-color: white;
+            color: #000;
+        }
+
+        .styled-table {
+            position: absolute;
+            margin-top: 5%;
+            left: 35%;
+            border-collapse: collapse;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+            background-color: white;
+        }
+        
+        .styled-table thead tr {
+            background-color: #009879;
+            color: #ffffff;
+            text-align: left;
+        }
+        
+        .styled-table th,
+        .styled-table td {
+            padding: 12px 15px;
+        }
+        
+        .styled-table tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+        
+        .styled-table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+        
+        .styled-table tbody tr:last-of-type {
+            border-bottom: 2px solid #009879;
+        }
+        
+        .styled-table tbody tr.active-row {
+            font-weight: bold;
+            color: #009879;
+        }
+
+        .text {
+            position: absolute;
+            top: 80%;
+            left: 20%;
+        }
+        .text p {
+            color: white;
+            font-size: 20px;
+            border: 5px solid white;
+            padding: 10px
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <title>Output</title>
+</head>
+
+<body>
+    <header>
+        <div class="main">
+            <div class="logo">
+                <img src="https://innodatatics.ai/assets/innodatatics-white1.png">
+            </div>
+            <ul>
+                <li><a href="/">Home</a></li>
+            </ul>
+        </div>
+        <div class="styled-table">
+            <h2 style="text-align:center">Index Replication of FBM KLCI</h2>
+            {% for output in output %}
+            {{ output|safe }}
+            {% endfor %}
+
+        </div>
+    </header>
+</body>
+
+</html>
